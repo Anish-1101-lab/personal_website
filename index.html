@@ -3,60 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Anish - Student Researcher</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">My Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to My Portfolio</h1>
-                <p>I'm a passionate developer creating amazing web experiences</p>
-                <a href="projects.html" class="cta-button">View My Work</a>
+    <div class="container">
+        <header class="header">
+            <div class="profile-section">
+                <h1>Anish</h1>
+                <p class="tagline">Student Researcher @ DaSH Lab</p>
+                <p class="institution">CSE @ BITS PILANI GOA</p>
             </div>
-        </section>
+        </header>
 
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Description of project 1</p>
+        <main class="main-content">
+            <section class="about-section">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p>I'm currently working at <a href="https://www.dashlab.in/" class="link">DaSH Lab</a> under <a href="https://arnab.dashlab.in/" class="link">Professor Arnab Paul</a>, focusing on:</p>
+                    <ul class="research-list">
+                        <li>Research on Large Language Models (LLMs) and file systems</li>
+                        <li>Developing LLM-powered tools for analyzing HPC I/O logs (PyDarshan)</li>
+                        <li>Creating optimization recommendations using advanced ML techniques</li>
+                    </ul>
+                    
+                    <div class="skills-container">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <span class="skill-tag">LLM Research</span>
+                            <span class="skill-tag">React + FastAPI</span>
+                            <span class="skill-tag">RAG Systems</span>
+                            <span class="skill-tag">FAISS for ML</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Description of project 2</p>
-                </div>
-                <div class="project-card">
-                    <h3>Project 3</h3>
-                    <p>Description of project 3</p>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer>
-        <div class="footer-content">
+        <footer class="footer">
             <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/Anish-1101-lab" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="www.linkedin.com/in/anish-sathyanarayanan-53b69029be" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:anishs1101@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
             </div>
-            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+        </footer>
+    </div>
 </body>
 </html> 
