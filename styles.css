@@ -5,12 +5,18 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: #2c3e50;
-    background: linear-gradient(135deg, #1a2a6c, #2a4858, #2c3e50);
+    color: #ffffff;
+    background: linear-gradient(135deg, #1a2a6c, #2a4858, #2c3e50) fixed;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -29,6 +35,7 @@ body {
     margin-bottom: 2rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
@@ -40,8 +47,9 @@ body {
 .header h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: #ffffff;
     letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .tagline {
@@ -49,21 +57,23 @@ body {
     color: #3498db;
     margin-bottom: 0.5rem;
     font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .institution {
-    color: #7f8c8d;
+    color: #ecf0f1;
     font-size: 1.2rem;
 }
 
 /* Main Content Styles */
 .main-content {
     flex-grow: 1;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 3rem;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -75,11 +85,12 @@ body {
 .about-content h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #2c3e50;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .about-content p {
-    color: #5f6c7b;
+    color: #ecf0f1;
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
 }
@@ -93,7 +104,7 @@ body {
     position: relative;
     padding-left: 1.5rem;
     margin-bottom: 1rem;
-    color: #5f6c7b;
+    color: #ecf0f1;
 }
 
 .research-list li:before {
@@ -124,9 +135,10 @@ body {
 .skills-container h3 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #2c3e50;
+    color: #ffffff;
     position: relative;
     display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .skills-container h3:after {
@@ -149,6 +161,7 @@ body {
     color: #3498db;
     margin-bottom: 1rem;
     font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .proficiency-group {
@@ -156,21 +169,24 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .proficiency-group:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.25);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .level-label {
     min-width: 120px;
-    color: #2c3e50;
+    color: #ffffff;
     font-weight: 600;
     padding-top: 0.8rem;
     position: relative;
@@ -201,7 +217,7 @@ body {
 
 .skill-tag {
     background: rgba(52, 152, 219, 0.1);
-    color: #3498db;
+    color: #ffffff;
     padding: 0.8rem 1.2rem;
     border-radius: 8px;
     text-align: center;
@@ -211,6 +227,8 @@ body {
     border: 1px solid rgba(52, 152, 219, 0.2);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .skill-tag:before {
@@ -233,8 +251,8 @@ body {
 
 .skill-tag:hover {
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
-    color: white;
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+    border-color: #3498db;
 }
 
 .skill-tag:hover:before {
@@ -245,6 +263,7 @@ body {
 .footer {
     margin-top: 3rem;
     text-align: center;
+    color: #ffffff;
 }
 
 .social-links {
@@ -258,13 +277,14 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
     border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: relative;
     overflow: hidden;
@@ -286,7 +306,19 @@ body {
 
 .social-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.social-link:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.social-link i,
+.social-link span {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
 }
 
 /* GitHub specific hover */
@@ -320,11 +352,6 @@ body {
 
     .header {
         padding: 2rem 0;
-    }
-
-    .profile-image {
-        width: 150px;
-        height: 150px;
     }
 
     .social-links {
