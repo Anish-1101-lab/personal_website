@@ -4,67 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anish - Student Researcher</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="./dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <div class="profile-section">
-                <h1>Anish</h1>
-                <p class="tagline">Student Researcher @ DaSH Lab</p>
-                <p class="institution">CSE @ BITS PILANI GOA</p>
+<body class="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 min-h-screen text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-screen flex flex-col">
+        <header class="text-center py-12 mb-8 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl">
+            <div class="space-y-2">
+                <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">Anish</h1>
+                <p class="text-xl text-primary-300 font-medium">Student Researcher @ DaSH Lab</p>
+                <p class="text-lg text-gray-300">CSE @ BITS PILANI GOA</p>
             </div>
         </header>
 
-        <main class="main-content">
-            <section class="about-section">
-                <div class="about-content">
-                    <h2>About Me</h2>
-                    <p>I'm currently working at <a href="https://www.dashlab.in/" class="link">DaSH Lab</a> under <a href="https://arnab.dashlab.in/" class="link">Professor Arnab Paul</a>, focusing on:</p>
-                    <ul class="research-list">
-                        <li>Research on Large Language Models (LLMs) and file systems</li>
-                        <li>Developing LLM-powered tools for analyzing HPC I/O logs (PyDarshan)</li>
-                        <li>Creating optimization recommendations using advanced ML techniques</li>
-                    </ul>
+        <main class="flex-grow bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-xl">
+            <section class="max-w-3xl mx-auto">
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-white">About Me</h2>
+                        <p class="text-gray-200 mb-6">
+                            I'm currently working at 
+                            <a href="https://www.dashlab.in/" class="text-primary-400 hover:text-primary-300 underline">DaSH Lab</a> 
+                            under 
+                            <a href="https://arnab.dashlab.in/" class="text-primary-400 hover:text-primary-300 underline">Professor Arnab Paul</a>, 
+                            focusing on:
+                        </p>
+                        <ul class="space-y-3 list-none pl-6">
+                            <li class="text-gray-200 relative before:content-['•'] before:absolute before:left-[-1rem] before:text-primary-400">
+                                Research on Large Language Models (LLMs) and file systems
+                            </li>
+                            <li class="text-gray-200 relative before:content-['•'] before:absolute before:left-[-1rem] before:text-primary-400">
+                                Developing LLM-powered tools for analyzing HPC I/O logs (PyDarshan)
+                            </li>
+                            <li class="text-gray-200 relative before:content-['•'] before:absolute before:left-[-1rem] before:text-primary-400">
+                                Creating optimization recommendations using advanced ML techniques
+                            </li>
+                        </ul>
+                    </div>
                     
-                    <div class="skills-container">
-                        <h3>Technical Proficiency</h3>
-                        <div class="skills-category">
-                            <h4>Languages</h4>
-                            <div class="proficiency-group">
-                                <div class="proficiency-level">
-                                    <span class="level-label">Proficient:</span>
-                                    <div class="skills-grid">
-                                        <div class="skill-tag"><span>Python3</span></div>
-                                        <div class="skill-tag"><span>LATEX</span></div>
+                    <div class="space-y-8">
+                        <h3 class="text-2xl font-bold text-white relative inline-block after:content-[''] after:absolute after:bottom-[-0.5rem] after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-primary-500 after:to-primary-600 after:rounded-full">
+                            Technical Proficiency
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-xl text-primary-400 font-semibold mb-4">Languages</h4>
+                                <div class="bg-white/5 backdrop-blur-md rounded-xl p-6 space-y-4 transition-all duration-300 hover:bg-white/10">
+                                    <div>
+                                        <span class="text-gray-300 font-medium mb-2 block">Proficient:</span>
+                                        <div class="flex flex-wrap gap-2">
+                                            <div class="skill-tag">Python3</div>
+                                            <div class="skill-tag">LATEX</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="proficiency-level">
-                                    <span class="level-label">Comfortable:</span>
-                                    <div class="skills-grid">
-                                        <div class="skill-tag"><span>C++</span></div>
-                                        <div class="skill-tag"><span>C</span></div>
-                                        <div class="skill-tag"><span>Bash</span></div>
+                                    <div>
+                                        <span class="text-gray-300 font-medium mb-2 block">Comfortable:</span>
+                                        <div class="flex flex-wrap gap-2">
+                                            <div class="skill-tag">C++</div>
+                                            <div class="skill-tag">C</div>
+                                            <div class="skill-tag">Bash</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="skills-category">
-                            <h4>Software & Libraries</h4>
-                            <div class="skills-grid">
-                                <div class="skill-tag"><span>PyTorch</span></div>
-                                <div class="skill-tag"><span>JAX</span></div>
-                                <div class="skill-tag"><span>HuggingFace</span></div>
-                                <div class="skill-tag"><span>Anaconda</span></div>
-                                <div class="skill-tag"><span>GitHub</span></div>
-                                <div class="skill-tag"><span>GitLab</span></div>
-                                <div class="skill-tag"><span>SciKit-Learn</span></div>
-                                <div class="skill-tag"><span>Docker</span></div>
+                            
+                            <div>
+                                <h4 class="text-xl text-primary-400 font-semibold mb-4">Software & Libraries</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="skill-tag">PyTorch</div>
+                                    <div class="skill-tag">JAX</div>
+                                    <div class="skill-tag">HuggingFace</div>
+                                    <div class="skill-tag">Anaconda</div>
+                                    <div class="skill-tag">GitHub</div>
+                                    <div class="skill-tag">GitLab</div>
+                                    <div class="skill-tag">SciKit-Learn</div>
+                                    <div class="skill-tag">Docker</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -72,17 +88,17 @@
             </section>
         </main>
 
-        <footer class="footer">
-            <div class="social-links">
-                <a href="https://github.com/Anish-1101-lab" target="_blank" class="social-link github">
+        <footer class="mt-12 text-center">
+            <div class="flex justify-center gap-4 flex-wrap">
+                <a href="https://github.com/Anish-1101-lab" target="_blank" class="social-link group">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
-                <a href="https://www.linkedin.com/in/anish-sathyanarayanan-53b69029be" target="_blank" class="social-link linkedin">
+                <a href="https://www.linkedin.com/in/anish-sathyanarayanan-53b69029be" target="_blank" class="social-link group">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
-                <a href="mailto:anishs1101@gmail.com" class="social-link email">
+                <a href="mailto:anishs1101@gmail.com" class="social-link group">
                     <i class="fas fa-envelope"></i>
                     <span>Email</span>
                 </a>
