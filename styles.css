@@ -9,7 +9,8 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #2c3e50;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #1a2a6c, #2a4858, #2c3e50);
+    min-height: 100vh;
 }
 
 .container {
@@ -26,6 +27,10 @@ body {
     text-align: center;
     padding: 3rem 0;
     margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .profile-section {
@@ -54,10 +59,12 @@ body {
 /* Main Content Styles */
 .main-content {
     flex-grow: 1;
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     padding: 3rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .about-section {
@@ -115,9 +122,22 @@ body {
 }
 
 .skills-container h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
     color: #2c3e50;
+    position: relative;
+    display: inline-block;
+}
+
+.skills-container h3:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 2px;
 }
 
 .skills-category {
@@ -134,21 +154,42 @@ body {
 .proficiency-group {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-.proficiency-level {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+.proficiency-group:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
 }
 
 .level-label {
-    min-width: 100px;
-    color: #5f6c7b;
-    font-weight: 500;
+    min-width: 120px;
+    color: #2c3e50;
+    font-weight: 600;
     padding-top: 0.8rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.level-label:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    transition: width 0.3s ease;
+}
+
+.proficiency-group:hover .level-label:after {
+    width: 50px;
 }
 
 .skills-grid {
@@ -159,21 +200,45 @@ body {
 }
 
 .skill-tag {
-    background-color: #f0f4f8;
+    background: rgba(52, 152, 219, 0.1);
     color: #3498db;
     padding: 0.8rem 1.2rem;
     border-radius: 8px;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-tag:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.skill-tag span {
+    position: relative;
+    z-index: 2;
 }
 
 .skill-tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.1);
-    background-color: #3498db;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
     color: white;
+}
+
+.skill-tag:hover:before {
+    opacity: 1;
 }
 
 /* Footer Styles */
@@ -186,19 +251,21 @@ body {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .social-link {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #5f6c7b;
+    color: #fff;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     position: relative;
     overflow: hidden;
 }
@@ -210,33 +277,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #3498db;
+    background: linear-gradient(135deg, #3498db, #2980b9);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
     z-index: 0;
 }
 
-.social-link:hover:before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.social-link i,
-.social-link span {
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
 .social-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
-}
-
-.social-link:hover i,
-.social-link:hover span {
-    color: white;
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
 }
 
 /* GitHub specific hover */
